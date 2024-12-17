@@ -50,8 +50,8 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
     );
 
     // Toggle comments on these lines to use transaction requests instead of transfer requests.
-    //const link = undefined;
-    const link = useMemo(() => new URL(`${baseURL}/api/`), [baseURL]);
+    const link = undefined;
+    //const link = useMemo(() => new URL(`${baseURL}/api/`), [baseURL]);
 
     let recipient: PublicKey | undefined = undefined;
     const { recipient: recipientParam, label, message } = query;
@@ -76,10 +76,11 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
                                     recipient={recipient}
                                     label={label}
                                     message={message}
-                                    symbol="SOL"
-                                    icon={<SOLIcon />}
-                                    decimals={9}
-                                    minDecimals={1}
+                                    splToken={MAINNET_USDC_MINT}
+                                    symbol="USDC"
+                                    icon={<USDCIcon />}
+                                    decimals={6}
+                                    minDecimals={2}
                                     connectWallet={connectWallet}
                                 >
                                     <TransactionsProvider>
