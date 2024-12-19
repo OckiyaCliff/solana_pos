@@ -98,7 +98,7 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
                 ) : (
                     <div className={css.container}>
                         <div className={css.card}>
-                            <h2>Military Goat Coin (MGOAT)</h2>
+                            <h2>Santa Rose ($Rose)</h2>
                             <p>The next big thing in the crypto world! Join the revolution with MGOAT.</p>
                         </div>
                         <div className={css.card}>
@@ -106,7 +106,7 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
                             <p>Stake, earn rewards, and participate in community governance.</p>
                         </div>
                         <a
-                            href="https://localhost:3001?recipient=HCcT1Zk74aKNtUrioLXxRc56RGSXTQTfBaF7pwCwzYjv&label=Santa+Rose+Presale"
+                            href="https://presale-site.example.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={css.button}

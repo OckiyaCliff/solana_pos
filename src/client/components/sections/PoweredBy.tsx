@@ -5,7 +5,7 @@ import css from './PoweredBy.module.css';
 export const PoweredBy: FC = () => {
     return (
         <div className={css.root}>
-            Santa Rose 
+            Santa Rose presale
         </div>
     );
 };
