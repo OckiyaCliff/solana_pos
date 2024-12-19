@@ -41,11 +41,14 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
     const network = WalletAdapterNetwork.Devnet;
 
     const wallets = useMemo(
-        () => (connectWallet ? [
-            new GlowWalletAdapter({ network }),
-            new PhantomWalletAdapter(),
-            new SolflareWalletAdapter({ network })
-        ] : []),
+        () =>
+            connectWallet
+                ? [
+                      new GlowWalletAdapter({ network }),
+                      new PhantomWalletAdapter(),
+                      new SolflareWalletAdapter({ network }),
+                  ]
+                : [],
         [connectWallet, network]
     );
 
@@ -93,8 +96,23 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
                         </WalletProvider>
                     </ConnectionProvider>
                 ) : (
-                    <div className={css.logo}>
-                        <SolanaPayLogo width={240} height={88} />
+                    <div className={css.container}>
+                        <div className={css.card}>
+                            <h2>Military Goat Coin (MGOAT)</h2>
+                            <p>The next big thing in the crypto world! Join the revolution with MGOAT.</p>
+                        </div>
+                        <div className={css.card}>
+                            <h2>Utility and Governance</h2>
+                            <p>Stake, earn rewards, and participate in community governance.</p>
+                        </div>
+                        <a
+                            href="https://localhost:3001?recipient=HCcT1Zk74aKNtUrioLXxRc56RGSXTQTfBaF7pwCwzYjv&label=Santa+Rose+Presale"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={css.button}
+                        >
+                            Buy Presale
+                        </a>
                     </div>
                 )}
             </FullscreenProvider>
