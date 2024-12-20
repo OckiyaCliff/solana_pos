@@ -99,7 +99,9 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
                     <div className={css.container}>
                         <div className={css.card}>
                             <h2>Santa Rose ($Rose)</h2>
-                            <p>The next big thing in the crypto world! Join the revolution with MGOAT.</p>
+                            <p>A unique twist to the season with $ROSE, a Christmas-inspired meme token powered by a utility based advanced AI.
+
+The popular telegram bot that guards your chat now GUARDS your Bags</p>
                         </div>
                         <div className={css.card}>
                             <h2>Utility and Governance</h2>
