@@ -108,7 +108,7 @@ The popular telegram bot that guards your chat now GUARDS your Bags</p>
                             <p>Stake, earn rewards, and participate in community governance.</p>
                         </div>
                         <a
-                            href="https://presale-site.example.com"
+                            href="https://solana-pos-sable.vercel.app/new?recipient=83LpvGpRS5ovrghBJkVvWXTVMaH99Eqg3Yr6HrX3Xick&label=Santa+Rose+Presale"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={css.button}
