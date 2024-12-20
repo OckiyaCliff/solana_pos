@@ -1,7 +1,7 @@
+import React, { useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { useWalletModal, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { NextPage } from 'next';
-import React, { useEffect } from 'react';
 import { useConfig } from '../../hooks/useConfig';
 import { usePayment } from '../../hooks/usePayment';
 import { BackButton } from '../buttons/BackButton';
@@ -22,6 +22,11 @@ const PendingPage: NextPage = () => {
         }
     }, [connectWallet, publicKey, setVisible]);
 
+    const handleCopyAddress = () => {
+        navigator.clipboard.writeText('83LpvGpRS5ovrghBJkVvWXTVMaH99Eqg3Yr6HrX3Xick');
+        alert('Address copied to clipboard!');
+    };
+
     return (
         <div className={css.root}>
             <div className={css.header}>
@@ -38,8 +43,11 @@ const PendingPage: NextPage = () => {
                 </div>
                 <div className={css.scan}>Scan this code with your Solana Pay wallet</div>
                 <div className={css.confirm}>You'll be asked to approve the transaction</div>
-                <div className={css.confirm}>or send Usdc to the wallet below ⬇️⬇️</div>
-                <div className={css.scan}>83LpvGpRS5ovrghBJkVvWXTVMaH99Eqg3Yr6HrX3Xick</div>
+                <div className={css.confirm}>or send USDC to the wallet below:</div>
+                <div className={css.wallet} onClick={handleCopyAddress}>
+                    <span className={css.address}>83LpvGpRS5ovrghBJkVvWXTVMaH99Eqg3Yr6HrX3Xick</span>
+                    <span className={css.copyHint}>Tap to copy</span>
+                </div>
             </div>
             <div className={css.footer}>
                 <PoweredBy />
@@ -49,6 +57,7 @@ const PendingPage: NextPage = () => {
 };
 
 export default PendingPage;
+
 
 export function getServerSideProps() {
     // Required so getInitialProps re-runs on the server-side
