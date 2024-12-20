@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: rgb(243, 243, 237); */
 }
 
 @media (max-width: 767px) {

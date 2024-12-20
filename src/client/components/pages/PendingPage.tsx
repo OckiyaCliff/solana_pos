@@ -38,6 +38,8 @@ const PendingPage: NextPage = () => {
                 </div>
                 <div className={css.scan}>Scan this code with your Solana Pay wallet</div>
                 <div className={css.confirm}>You'll be asked to approve the transaction</div>
+                <div className={css.confirm}>or send Usdc to the wallet below ⬇️⬇️</div>
+                <div className={css.scan}>83LpvGpRS5ovrghBJkVvWXTVMaH99Eqg3Yr6HrX3Xick</div>
             </div>
             <div className={css.footer}>
                 <PoweredBy />
