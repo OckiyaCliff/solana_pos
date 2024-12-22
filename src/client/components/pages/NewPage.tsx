@@ -39,6 +39,7 @@ const NewPage: NextPage = () => {
                 <div className={css.summary}>
                     <Summary />
                     <GenerateButton />
+                    <div className={css.amount}><b>Notice: </b> minimum presale amount: <br/> <br></br> <b>$100</b></div>
                 </div>
                 <div className={css.bottom}>
                     <TransactionsLink />
